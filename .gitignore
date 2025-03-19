@@ -1,0 +1,6 @@
+*.fa
+*.fa.fai
+*.2bit
+DNA_transposons
+*tsv
+node_modules
