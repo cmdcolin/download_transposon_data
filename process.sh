@@ -1,8 +1,13 @@
-node tableify.ts | head -n1 | while read bed twobit accession; do
-  echo $bed $twobit $accession
-  wget -nc $twobit
-  twoBitToFa $twobit $(basename $twobit).fa
+#!/bin/bash
 
-  bedtools getfasta -bed DNA_transposons/$bed -fi $(basename $twobit).fa -name+ | bgzip >DNA_transposon_fastas/$accession.dnate.fa.gz
-  rm -f $twobit $(basename $twobit).fa
+mkdir DNA_transposon_fasta
+node tableify.ts | while read bed twobit accession; do
+  echo $bed $twobit $accession
+  twoBitToFa $twobit $(basename $twobit).fa
+  samtools faidx $(basename $twobit).fa
+
+  bedtools slop -i DNA_transposons/$bed -g $(basename $twobit).fa.fai -l 2000 -r 2000 | gzip >DNA_transposon_fasta/slop.$bed.gz
+  bedtools getfasta -bed DNA_transposon_fasta/slop.$bed.gz -fi $(basename $twobit).fa -name+ | bgzip >DNA_transposon_fasta/$accession.dna_transposons.fa.gz
+
+  rm -f $(basename $twobit).fa*
 done

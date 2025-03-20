@@ -2,5 +2,7 @@
 *.fa.fai
 *.2bit
 DNA_transposons
+DNA_transposon_fasta
 *tsv
 node_modules
+out.log
