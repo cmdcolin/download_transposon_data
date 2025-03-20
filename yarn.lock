@@ -2,12 +2,24 @@
 # yarn lockfile v1
 
 
+"@gmod/twobit@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@gmod/twobit/-/twobit-4.0.1.tgz#8ce3a032be8bb3bf0b1037ed8efc9e8f7a45113d"
+  integrity sha512-aMmRhKERoLidFG3yyncd50RtfMlYgBu3eI5dNrqDaMvX63gVOyFs89Phc0YbFgVI76TP9gXqAmRAyyBI4i7/OA==
+  dependencies:
+    generic-filehandle2 "^1.0.0"
+
 "@types/node@^22.13.10":
   version "22.13.10"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-22.13.10.tgz#df9ea358c5ed991266becc3109dc2dc9125d77e4"
   integrity sha512-I6LPUvlRH+O6VRUqYOcMudhaIdUVWfsjnZavnsraHvpBwaEyMN29ry+0UVJhImYL16xsscu0aske3yA+uPOWfw==
   dependencies:
     undici-types "~6.20.0"
+
+generic-filehandle2@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/generic-filehandle2/-/generic-filehandle2-1.0.0.tgz#d7a216072467793e1e48c925f97162eab1b82efc"
+  integrity sha512-jXfyNk1zhsR0Xf2sLm4vgeYSP1q1XbeSVG0TRSnOCKLb2CojPNJyy57nKi6QWmt83yGSHZGay8qIn7YWyl2V5w==
 
 undici-types@~6.20.0:
   version "6.20.0"

@@ -1,6 +1,8 @@
 {
   "type": "module",
   "dependencies": {
-    "@types/node": "^22.13.10"
+    "@gmod/twobit": "^4.0.1",
+    "@types/node": "^22.13.10",
+    "generic-filehandle2": "^1.0.0"
   }
 }
