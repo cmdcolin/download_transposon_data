@@ -6,3 +6,4 @@ DNA_transposon_fasta
 *tsv
 node_modules
 *.log
+genomes
