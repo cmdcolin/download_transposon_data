@@ -5,4 +5,4 @@ DNA_transposons
 DNA_transposon_fasta
 *tsv
 node_modules
-out.log
+*.log
